@@ -1,4 +1,4 @@
-#A RESTAURAÇÃO DA FÁBRICA DOS EXILADOS
+# A RESTAURAÇÃO DA FÁBRICA DOS EXILADOS
 
 **Aluno:** ANIBAL BRUNO GARCIA COSTA  
 **Matrícula:** 20250054517  
@@ -47,7 +47,7 @@ O jogo possui três andares:
 
 # 2. Personagens
 
-O jogador pode escolher entre quatro classes. Cada uma possui atributos iniciais e uma habilidade especial própria.
+O jogador pode escolher entre quatro classes. Cada uma possui atributos iniciais, uma habilidade especial própria e características que influenciam seu desempenho durante os combates.
 
 ## 2.1. Atributos iniciais
 
@@ -67,12 +67,14 @@ Todos começam no nível 1 e com 0 XP.
 - Descrição: especialista em combate físico, possui grande resistência e força.
 - Habilidade especial: **Golpe Pesado**.
 - Funcionamento: utiliza um ataque com D20, força e um bônus adicional de 5 pontos.
+- Quantidade de usos: 1 vez por combate.
 
 **Mago**
 
 - Descrição: especialista em inteligência e ataques mágicos.
 - Habilidade especial: **Ataque Mágico**.
 - Funcionamento: utiliza um ataque com D20 somado à inteligência.
+- Quantidade de usos: 2 vezes por combate.
 
 **Arqueiro**
 
@@ -80,6 +82,7 @@ Todos começam no nível 1 e com 0 XP.
 - Habilidade especial: **Tiro Preciso**.
 - Funcionamento: utiliza um ataque com D20 somado à agilidade.
 - Característica adicional: recebe 10 pontos extras de agilidade para calcular a esquiva.
+- Quantidade de usos: 1 vez por combate.
 
 **Ladrão**
 
@@ -87,6 +90,7 @@ Todos começam no nível 1 e com 0 XP.
 - Habilidade especial: **Ataque Furtivo**.
 - Funcionamento: utiliza um ataque com D20, agilidade e um bônus adicional de 5 pontos.
 - Característica adicional: recebe 15 pontos extras de agilidade para calcular a esquiva.
+- Quantidade de usos: 1 vez por combate.
 
 ## 2.3. Equipamentos
 
@@ -165,9 +169,9 @@ Após derrotá-lo, o caminho até o Núcleo fica livre e o jogador encontra o te
 
 Ao iniciar o jogo, o jogador encontra três opções:
 
-1. Começar: inicia uma nova aventura e permite escolher uma classe.
-2. Sobre: apresenta informações sobre a proposta do jogo.
-3. Informações gerais: exibe os atributos dos personagens e monstros.
+1. **Começar:** inicia uma nova aventura e permite escolher uma classe.
+2. **Sobre:** apresenta informações sobre a proposta do jogo.
+3. **Informações gerais:** exibe os atributos dos personagens e monstros.
 
 Também existe a opção 0 para sair do jogo.
 
@@ -181,9 +185,8 @@ A movimentação acontece por meio de um dado de seis faces.
 - O jogador não pode ultrapassar a última posição do mapa.
 - Cada andar possui 12 posições.
 - As casas intermediárias são embaralhadas aleatoriamente.
-- A casa do chefe permanece sempre na última posição.
-
-Antes de lançar o dado, o jogador também pode analisar as informações do personagem, verificando vida, nível, XP e atributos.
+- A casa inicial e a casa do chefe permanecem em suas posições.
+- Antes de lançar o dado, o jogador também pode analisar as informações do personagem, verificando vida, nível, XP e atributos.
 
 ## 4.3. Tipos de casas
 
@@ -219,8 +222,8 @@ A poção mágica pode aumentar força, defesa, agilidade, inteligência ou vida
 Durante uma batalha, o jogador pode escolher entre diferentes ações:
 
 - **Ataque normal:** realiza um ataque físico utilizando a força.
-- **Habilidade especial:** executa a habilidade exclusiva da classe, podendo ser utilizada uma vez por combate.
-- **Defender:** reduz pela metade o dano recebido no próximo ataque do inimigo.
+- **Habilidade especial:** executa a habilidade exclusiva da classe, com uma quantidade limitada de usos por combate.
+- **Defender:** reduz pela metade o dano recebido no próximo ataque do inimigo e oferece uma possibilidade de contra-atacar.
 - **Fugir:** permite tentar escapar de combates contra monstros comuns, com 50% de chance de sucesso.
 
 Não é possível fugir dos combates contra chefes.
@@ -237,6 +240,8 @@ Em seguida, a defesa do inimigo é subtraída:
 
 Caso o resultado seja inferior a 1, o dano será igual a 1.
 
+Os inimigos também possuem uma chance de esquivar dos ataques normais do jogador.
+
 ### 4.5.2. Ataques especiais
 
 Cada classe utiliza um atributo diferente para calcular sua habilidade:
@@ -251,6 +256,17 @@ Cada classe utiliza um atributo diferente para calcular sua habilidade:
 Depois do cálculo do ataque, a defesa do inimigo é subtraída.
 
 O dano mínimo também é de 1 ponto.
+
+A quantidade de usos é diferente para cada classe:
+
+| Classe | Usos por combate |
+|---|---:|
+| Guerreiro | 1 |
+| Mago | 2 |
+| Arqueiro | 1 |
+| Ladrão | 1 |
+
+Os usos são reiniciados quando um novo combate começa.
 
 ### 4.5.3. Ataques críticos
 
@@ -279,7 +295,7 @@ Os inimigos também podem esquivar dos ataques normais do jogador. A chance é c
 
 `Chance de esquiva do inimigo = Agilidade × 2 (%)`
 
-### 4.5.5. Defesa
+### 4.5.5. Defesa e contra-ataque
 
 Quando o jogador escolhe defender, o dano do próximo ataque recebido é reduzido pela metade.
 
@@ -289,7 +305,17 @@ A fórmula utilizada é:
 
 Caso o resultado seja inferior a 1, o dano mínimo será 1.
 
-### 4.6. Sistema de experiência e evolução
+Além da redução de dano, existe uma chance de 50% de realizar um contra-ataque quando o inimigo ataca enquanto o jogador está defendendo.
+
+O contra-ataque utiliza um dado de dez faces (D10):
+
+`Dano do contra-ataque = D10 + Força do jogador - Defesa do inimigo`
+
+Caso o resultado seja inferior a 1, o dano mínimo será 1.
+
+Se o contra-ataque derrotar o inimigo, o jogador não recebe o dano daquele ataque.
+
+## 4.6. Sistema de experiência e evolução
 
 O personagem recebe experiência ao derrotar monstros, chefes e completar missões.
 
@@ -348,6 +374,8 @@ As missões podem ser aceitas ou recusadas.
 
 Caso sejam aceitas, ficam ativas até o próximo combate. Ao cumprir o objetivo, o jogador recebe a recompensa em XP. Caso não consiga, a missão é considerada falha.
 
+A missão **Eu aguento!** considera a utilização da habilidade especial independentemente da quantidade de usos disponíveis para a classe. Portanto, mesmo que o Mago tenha dois usos, utilizar apenas um já faz a missão falhar.
+
 ## 4.8. Condições de vitória e derrota
 
 **Vitória:**
@@ -386,7 +414,7 @@ sudo apt install build-essential
 3. Compile:
 
 ```bash
-gcc -Wall -Wextra -o fabrica main.c
+gcc -std=c99 -Wall -Wextra -o fabrica main.c
 ```
 
 4. Execute:
@@ -403,7 +431,7 @@ gcc -Wall -Wextra -o fabrica main.c
 2. Compile:
 
 ```bash
-gcc -Wall -Wextra -o fabrica.exe main.c
+gcc -std=c99 -Wall -Wextra -o fabrica.exe main.c
 ```
 
 3. Execute:
@@ -424,7 +452,7 @@ xcode-select --install
 3. Compile:
 
 ```bash
-gcc -Wall -Wextra -o fabrica main.c
+gcc -std=c99 -Wall -Wextra -o fabrica main.c
 ```
 
 4. Execute:
@@ -463,7 +491,7 @@ As definições `Monstro` e `Chefe` são apelidos de `Inimigo`, utilizando `type
 
 **Missao**
 
-Armazena o tipo da missão e a quantidade de XP concedida como recompensa.
+Armazena o nome, o tipo da missão e a quantidade de XP concedida como recompensa.
 
 ## 6.2. Enumerações (enum)
 
@@ -497,7 +525,15 @@ O projeto utiliza vetores e matrizes para organizar os dados.
 - `chefes[3]`: armazena os três chefes.
 - `casas[12]`: armazena os tipos de casas do mapa.
 
-## 6.4. Principais funções
+## 6.4. Ponteiros
+
+Os ponteiros são utilizados para permitir que determinadas funções acessem e modifiquem diretamente os dados das estruturas.
+
+Por exemplo, funções como `combater()`, `receber_dano()`, `curar_personagem()` e `verificar_nivel()` recebem ponteiros para personagens ou inimigos.
+
+Isso permite modificar atributos como vida, XP e nível sem precisar retornar uma estrutura inteira.
+
+## 6.5. Principais funções
 
 | Função | Responsabilidade |
 |---|---|
@@ -512,7 +548,7 @@ O projeto utiliza vetores e matrizes para organizar os dados.
 | `embaralhar_casas()` | Embaralha as casas intermediárias do mapa. |
 | `iniciar()` | Apresenta a seleção de personagens. |
 | `jogar_andar()` | Controla a exploração de cada andar. |
-| `combater()` | Controla o sistema de batalhas. |
+| `combater()` | Controla o sistema de batalhas, ataques, defesa, esquiva e contra-ataque. |
 | `tesouro()` | Sorteia e aplica as recompensas dos tesouros. |
 | `sortear_missao()` | Sorteia uma missão especial. |
 | `verificar_missao()` | Verifica se o desafio foi cumprido. |
