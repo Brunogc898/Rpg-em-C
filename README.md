@@ -1,7 +1,7 @@
 #A RESTAURAÇÃO DA FÁBRICA DOS EXILADOS
 
-**Aluno:** [Nome completo]  
-**Matrícula:** [Número da matrícula]  
+**Aluno:** ANIBAL BRUNO GARCIA COSTA  
+**Matrícula:** 20250054517  
 **Curso:** Sistemas de Informação – UFRN  
 **Linguagem:** C
 
