@@ -574,7 +574,7 @@ Caso sejam adicionadas imagens, elas poderão ser organizadas nesta seção.
 
 O vídeo de demonstração apresenta o funcionamento do jogo, incluindo a seleção de personagens, movimentação pelos andares, encontros com monstros, combates, utilização de habilidades especiais, missões e enfrentamento dos chefes.
 
-**Link do vídeo:** [INSERIR LINK DO VÍDEO AQUI]
+**Link do vídeo:** https://drive.google.com/file/d/1Hc11OVnajMpX4stoREHUabHdBNzPCTdk/view?usp=drive_link
 
 ---
 
